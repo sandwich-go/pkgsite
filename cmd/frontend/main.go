@@ -77,6 +77,7 @@ func main() {
 		log.Info(ctx, "BYPASSING LICENSE CHECKING: DISPLAYING NON-REDISTRIBUTABLE INFORMATION")
 	}
 
+	log.Infof(ctx, "localMode: %v proxyURL: %s", *localMode, *proxyURL)
 	log.Infof(ctx, "cmd/frontend: initializing cmdconfig.ExperimentGetter")
 	expg := cmdconfig.ExperimentGetter(ctx, cfg)
 	log.Infof(ctx, "cmd/frontend: initialized cmdconfig.ExperimentGetter")
